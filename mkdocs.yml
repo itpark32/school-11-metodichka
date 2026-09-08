@@ -1,0 +1,70 @@
+site_name: Методичка 11 потока
+site_description: Короткий маршрут повторения Python по материалам и проектам 11 потока
+site_url: https://itpark32.github.io/school-11-metodichka/
+repo_name: school_11_python_projects
+repo_url: https://github.com/amsmyslov2808/school_11_python_projects
+
+theme:
+  name: material
+  language: ru
+  icon:
+    logo: material/school
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Включить тёмную тему
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Включить светлую тему
+  features:
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+
+plugins:
+  - search:
+      lang: ru
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Маршрут: index.md
+  - Основы Python:
+      - Данные и условия: start.md
+      - Циклы: loops.md
+      - Коллекции и алгоритмы: collections.md
+      - Двумерные списки и игры: games.md
+      - Строки и срезы: strings.md
+      - Функции и рекурсия: functions.md
+      - Состояния и файлы: state-files.md
+  - Консольные приложения:
+      - dataclass и CRUD: dataclasses-crud.md
+      - Архитектура CRUD: architecture.md
+      - Сохранение данных: storage.md
+      - Сортировка и поиск: search-sort.md
+      - Консольный UI: ui.md
+      - Большой проект: final-project.md
