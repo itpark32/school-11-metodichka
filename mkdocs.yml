@@ -1,5 +1,5 @@
 site_name: Методичка 11 потока
-site_description: Короткий маршрут повторения Python по материалам и проектам 11 потока
+site_description: Короткий маршрут повторения Python для школьников 11 потока
 site_url: https://itpark32.github.io/school-11-metodichka/
 repo_name: school_11_python_projects
 repo_url: https://github.com/amsmyslov2808/school_11_python_projects
@@ -7,29 +7,36 @@ repo_url: https://github.com/amsmyslov2808/school_11_python_projects
 theme:
   name: material
   language: ru
+  font: false
   icon:
     logo: material/school
     repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: amber
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
-        name: Включить тёмную тему
+        name: Включить темную тему
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: amber
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Включить светлую тему
   features:
     - navigation.indexes
+    - navigation.sections
     - navigation.top
-    - content.code.copy
+    - navigation.tracking
     - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.code.select
+    - toc.follow
 
 plugins:
   - search:
@@ -42,7 +49,12 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - toc:
@@ -54,17 +66,27 @@ extra_css:
 nav:
   - Маршрут: index.md
   - Основы Python:
-      - Данные и условия: start.md
+      - Данные и арифметика: start.md
+      - Условия и ошибки: conditions-errors.md
       - Циклы: loops.md
-      - Коллекции и алгоритмы: collections.md
+  - Коллекции и алгоритмы:
+      - Списки и алгоритмы: collections.md
       - Двумерные списки и игры: games.md
       - Строки и срезы: strings.md
-      - Функции и рекурсия: functions.md
-      - Состояния и файлы: state-files.md
+  - Функции и состояние:
+      - Функции: functions.md
+      - Рекурсия: recursion.md
+      - Конечные автоматы и файлы: state-files.md
   - Консольные приложения:
       - dataclass и CRUD: dataclasses-crud.md
       - Архитектура CRUD: architecture.md
       - Сохранение данных: storage.md
       - Сортировка и поиск: search-sort.md
       - Консольный UI: ui.md
+      - Lambda и генераторы: functional-tools.md
+      - Git и история проекта: git.md
       - Большой проект: final-project.md
+  - Практика:
+      - Проекты потока: projects.md
+      - Мини-задачи: practice.md
+  - Следующие темы курса: next.md
