@@ -1,92 +1,103 @@
-site_name: Методичка 11 потока
-site_description: Короткий маршрут повторения Python для школьников 11 потока
+site_name: Python для школьников | 11 поток IT-ПАРКа
+site_description: 'Методичка 11 потока: Python, dataclass, CRUD, файлы, API, парсинг, Telegram, FSM и Docker. Теория, разборы
+  и реальные задачи.'
 site_url: https://itpark32.github.io/school-11-metodichka/
-repo_name: school_11_python_projects
-repo_url: https://github.com/amsmyslov2808/school_11_python_projects
-
+repo_name: Задать вопрос по методичке
+repo_url: https://t.me/amsmyslov
 theme:
   name: material
   language: ru
   font: false
   icon:
     logo: material/school
-    repo: fontawesome/brands/github
+    repo: material/chat-question-outline
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/weather-night
-        name: Включить темную тему
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/weather-sunny
-        name: Включить светлую тему
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    primary: custom
+    accent: custom
+    toggle:
+      icon: material/weather-night
+      name: Включить темную тему
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    primary: custom
+    accent: custom
+    toggle:
+      icon: material/weather-sunny
+      name: Включить светлую тему
   features:
-    - navigation.indexes
-    - navigation.sections
-    - navigation.top
-    - navigation.tracking
-    - search.highlight
-    - search.share
-    - search.suggest
-    - content.code.copy
-    - content.code.select
-    - toc.follow
-
+  - navigation.indexes
+  - navigation.sections
+  - navigation.top
+  - navigation.tracking
+  - search.highlight
+  - search.share
+  - search.suggest
+  - content.code.copy
+  - content.code.select
+  - toc.follow
+  custom_dir: overrides
 plugins:
-  - search:
-      lang: ru
-
+- search:
+    lang: ru
 markdown_extensions:
-  - admonition
-  - attr_list
-  - md_in_html
-  - pymdownx.details
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - toc:
-      permalink: true
-
+- admonition
+- attr_list
+- md_in_html
+- pymdownx.details
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.superfences
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.tasklist:
+    custom_checkbox: true
+- toc:
+    permalink: true
 extra_css:
-  - stylesheets/extra.css
-
+- stylesheets/extra.css
 nav:
-  - Маршрут: index.md
-  - Основы Python:
-      - Данные и арифметика: start.md
-      - Условия и ошибки: conditions-errors.md
-      - Циклы: loops.md
-  - Коллекции и алгоритмы:
-      - Списки и алгоритмы: collections.md
-      - Двумерные списки и игры: games.md
-      - Строки и срезы: strings.md
-  - Функции и состояние:
-      - Функции: functions.md
-      - Рекурсия: recursion.md
-      - Конечные автоматы и файлы: state-files.md
-  - Консольные приложения:
-      - dataclass и CRUD: dataclasses-crud.md
-      - Архитектура CRUD: architecture.md
-      - Сохранение данных: storage.md
-      - Сортировка и поиск: search-sort.md
-      - Консольный UI: ui.md
-      - Lambda и генераторы: functional-tools.md
-      - Git и история проекта: git.md
-      - Большой проект: final-project.md
-  - Практика:
-      - Проекты потока: projects.md
-      - Мини-задачи: practice.md
-  - Следующие темы курса: next.md
+- Маршрут: index.md
+- 1. Основы Python:
+  - Ввод, типы и арифметика: start.md
+  - Условия и бизнес-правила: conditions-errors.md
+  - Циклы и накопление: loops.md
+- 2. Данные, функции и состояние:
+  - Коллекции, поиск и сортировка: collections.md
+  - Двумерные списки и таблицы: games.md
+  - Строки и срезы: strings.md
+  - Функции и декомпозиция: functions.md
+  - Рекурсия и вызовы: recursion.md
+  - Состояния и переходы: state-files.md
+  - Модули и структура программы: modules.md
+  - Файлы и исключения: files-errors.md
+- 3. Консольные приложения:
+  - Dataclass и модели: dataclasses-crud.md
+  - Даты и проверка ввода: dates-validation.md
+  - CRUD и стабильные ID: crud.md
+  - Архитектура и договоры: architecture.md
+  - Сохранение и загрузка: storage.md
+  - Поиск и сортировка объектов: search-sort.md
+  - Lambda и генераторы коллекций: functional-tools.md
+  - Меню и роли: ui.md
+  - Git и рабочие изменения: git.md
+- 4. Интернет и внешние данные:
+  - HTTP API, JSON и ошибки: api.md
+  - HTML и BeautifulSoup: parsing.md
+- 5. Telegram и запуск:
+  - Понятный интерфейс: human-interface.md
+  - 'Бот: команды и сообщения': telegram.md
+  - Кнопки и обработка действий: bot-events.md
+  - FSM и StateContext: bot-ui.md
+  - ТЗ, макеты и переходы: bot-design.md
+  - Docker и сервер: docker.md
+- 6. Свой проект:
+  - От требований к реализации: final-project.md
+  - Проверка и техническая защита: defense.md
+- 7. Самостоятельная работа:
+  - Проекты 11 потока: projects.md
+  - 12 практических брифов: practice.md
